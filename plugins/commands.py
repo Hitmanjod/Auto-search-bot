@@ -252,7 +252,7 @@ async def start(client, message):
                 text="<b>Invalid link or Expired link !</b>",
                 protect_content=True
             )
-if data.startswith("sendfiles"):
+    if data.startswith("sendfiles"):
         chat_id = int("-" + file_id.split("-")[1])
         userid = message.from_user.id if message.from_user else None
         st = await client.get_chat_member(chat_id, userid)
